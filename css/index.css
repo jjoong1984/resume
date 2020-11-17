@@ -185,39 +185,60 @@ body, html, #wrap { height:100% }
     100% { opacity:1; transform:translateX(0%)}
 }
 .section-outer .section:nth-child(2) .portfolio_outer ul {
-    height:100% ;
-    margin-top:240px;
-    animation:fadeInUp6 0.5s both 0.2s 
+    animation:fadeInUp6 0.5s both 0.2s;
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    width: 68%;
+    margin: 130px auto 0;
+    
 }
 @keyframes fadeInUp6{ 
     0% { opacity:0; transform:translateY(-20%)}
     100% { opacity:1; transform:translateY(0%)}
 }
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(1) { 
+    grid-area : 1/1/3/3;
+  
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(2) { 
+    grid-area : 1/3/2/4;
+ 
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(3) { 
+    grid-area : 2/3/3/4;
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(4) { 
+    grid-area : 3/1/4/2;
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(5) { 
+    grid-area : 4/1/5/2;
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:nth-child(6) { 
+    grid-area : 3/2/5/4;
+}
 .section-outer .section:nth-child(2) .portfolio_outer li { 
-    float:left; 
-    width:32%; height:267px;
-    overflow: hidden;
-    margin-left:15px;
-    margin-bottom:12px;
     position: relative;
+   
 }
-.section-outer .section:nth-child(2) .portfolio_outer li > div { 
-    top:0; left:0; right:0; bottom:0;
-    background: rgba(0, 0, 0, 0.4);
+
+.section-outer .section:nth-child(2) .portfolio_outer li .wrap { 
     position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(0, 0, 0, 0.8);
+    opacity:0;
+    transition:all 0.3s
+}
+.section-outer .section:nth-child(2) .portfolio_outer li:hover .wrap { 
+    opacity:1;
+}
+.section-outer .section:nth-child(2) .portfolio_outer li  p { 
+    color:#ddd;
+    margin-top: 10px;
     text-align: center;
-}
-.section-outer .section:nth-child(2) .portfolio_outer li > div > p { 
-    display: inline-block;
-    color:#fff;
-    z-index: 9999;
-    margin-top: 130px;
-}
-.section-outer .section:nth-child(2) .portfolio_outer li img { 
-    transition:all 0.5s
-}
-.section-outer .section:nth-child(2) .portfolio_outer li:hover img { 
-    transform:scale(1.1)
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
 }
 
 .section-outer .section:nth-child(2) .popup { 
@@ -240,7 +261,7 @@ body, html, #wrap { height:100% }
 }
 .section-outer .section:nth-child(2) .popup .close { 
     position: absolute;
-    top:2%; right:2%;
+    top:-40px; right:-40px;
     color:#aaa;
     font-size:40px;
     background:none;
@@ -255,7 +276,7 @@ body, html, #wrap { height:100% }
     top:50%;
     transform:translateY(-50%);
     color:#aaa;
-    font-size:40px;
+    font-size:45px;
     background:none;
     cursor:pointer;
     outline: none;
@@ -264,10 +285,10 @@ body, html, #wrap { height:100% }
     color:#fff;
 }
 .section-outer .section:nth-child(2) .popup .prev { 
-    left:-3%
+    left:-6%
 }
 .section-outer .section:nth-child(2) .popup .next { 
-    right:-3%
+    right:-6%
 }
 
 .section-outer .section:nth-child(2) .blind_box { 
@@ -352,31 +373,31 @@ body, html, #wrap { height:100% }
 }
 .skills_outer .html .myscore { 
     background:rgb(0, 139, 139);
-    animation:htmlscore 1s both
+    animation:htmlscore 1s both 0.2s
 }
 .skills_outer .css .myscore{ 
     background:rgb(30, 139, 139);
-    animation:cssscore 1s both 0.5s
+    animation:cssscore 1s both 0.4s
 }
 .skills_outer .js .myscore{ 
     background:rgb(50, 139, 139);
-    animation:jsscore 1s both 1s
+    animation:jsscore 1s both 0.6s
 }
 .skills_outer .jq .myscore{ 
     background:rgb(80, 139, 139);
-    animation:jqscore 1s both 1.5s
+    animation:jqscore 1s both 0.8s
 }
 .skills_outer .react .myscore{ 
     background:rgb(100, 139, 139);
-    animation:reactscore 1s both 2s
+    animation:reactscore 1s both 1s
 }
 .skills_outer .ai .myscore { 
     background:rgb(0, 139, 139);
-    animation:htmlscore 1s both 2.2s
+    animation:htmlscore 1s both 1.2s
 }
 .skills_outer .ps .myscore{ 
     background:rgb(30, 139, 139);
-    animation:cssscore 1s both 2.5s
+    animation:cssscore 1s both 1.4s
 }
 @keyframes htmlscore { 
     0% { height:0%;}
@@ -402,22 +423,22 @@ body, html, #wrap { height:100% }
     animation:htmllight 1s both 0.2s
 }
 .skills_outer .css .score { 
-    animation:csslight 1s both 0.6s
+    animation:csslight 1s both 0.4s
 }
 .skills_outer .js .score { 
-    animation:jslight 1s both 1s
+    animation:jslight 1s both 0.6s
 }
 .skills_outer .jq .score { 
-    animation:jqlight 1s both 1.4s
+    animation:jqlight 1s both 0.8s
 }
 .skills_outer .react .score { 
-    animation:reactlight 1s both 1.7s
+    animation:reactlight 1s both 1s
 }
 .skills_outer .ai .score { 
-    animation:htmllight 1s both 2s
+    animation:htmllight 1s both 1.2s
 }
 .skills_outer .ps .score { 
-    animation:csslight 1s both 2.3s
+    animation:csslight 1s both 1.4s
 }
 @keyframes htmllight { 
     0% { box-shadow:0px 0px 0px darkcyan; }
