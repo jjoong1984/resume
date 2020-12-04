@@ -328,7 +328,7 @@ body, html, #wrap { height:100% }
 }
 .section-outer .section:nth-child(3) .skills_outer { 
     height:100%;
-    padding-left:8%;
+    padding-left:6%;
 }
 .section-outer .section:nth-child(3) .skills_outer h2 { 
     color:rgba(255, 255, 255, 0.05);
@@ -341,7 +341,7 @@ body, html, #wrap { height:100% }
 .section-outer .section:nth-child(3) .skills_outer > div { 
     float: left;
     height:65%;
-    width: 13%;
+    width: 15%;
     margin-top: 210px;
     text-align: center;
 }
